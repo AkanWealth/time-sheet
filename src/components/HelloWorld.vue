@@ -2,7 +2,7 @@
   <v-container>
     <div class="landing">Trace your time at your own pace</div>
     <p>Spend less time making the right and informed decisions</p>
-    <v-btn class="landing-btn-1"> Login</v-btn>
+    <v-btn color="indigo" dark> Login</v-btn>
     <v-btn class="landing-btn-2" style="background-color: primary"> Learn More</v-btn>
   </v-container>
 </template>

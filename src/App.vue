@@ -1,46 +1,31 @@
 <template>
   <v-app>
-    <v-app-bar app dark>
+    <v-app-bar app color="transparent" flat dark>
       <v-app-bar-title class="title">Pace </v-app-bar-title>
 
       <v-spacer></v-spacer>
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        class="ma-2"
+        color="indigo"
         target="_blank"
-        text
+        plain
+        to="/src/components/HelloWorld.vue"
         >Home
       </v-btn>
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        class="ma-2"
+        color="indigo"
         target="_blank"
-        text
+        plain
+        to="/src/components/About.vue"
         >Features
       </v-btn>
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-        >Pricing
-      </v-btn>
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-        >About
-      </v-btn>
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-        >contact
-      </v-btn>
+      <v-btn class="ma-2" color="indigo" target="_blank" plain>Pricing </v-btn>
+      <v-btn class="ma-2" color="indigo" target="_blank" plain>About </v-btn>
+      <v-btn class="ma-2" color="indigo" target="_blank" plain>contact </v-btn>
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        outlined
-      >
+      <v-btn class="ma-2" color="indigo" target="_blank" outlined plain>
         <span class="mr-2">Get Started</span>
       </v-btn>
     </v-app-bar>
