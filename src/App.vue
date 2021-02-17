@@ -1,63 +1,32 @@
 <template>
-  <v-app>
-    <v-app-bar app color="transparent" flat dark>
-      <v-app-bar-title class="title">Pace </v-app-bar-title>
-
-      <v-spacer></v-spacer>
-      <v-btn
-        class="ma-2"
-        color="indigo"
-        target="_blank"
-        plain
-        to="/src/components/HelloWorld.vue"
-        >Home
-      </v-btn>
-      <v-btn
-        class="ma-2"
-        color="indigo"
-        target="_blank"
-        plain
-        to="/src/components/About.vue"
-        >Features
-      </v-btn>
-      <v-btn class="ma-2" color="indigo" target="_blank" plain>Pricing </v-btn>
-      <v-btn class="ma-2" color="indigo" target="_blank" plain>About </v-btn>
-      <v-btn class="ma-2" color="indigo" target="_blank" plain>contact </v-btn>
-      <v-spacer></v-spacer>
-
-      <v-btn class="ma-2" color="indigo" target="_blank" outlined plain>
-        <span class="mr-2">Get Started</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-    </v-main>
-  </v-app>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
+  </div>
 </template>
 
-<script>
-import HelloWorld from "./components/HelloWorld";
-
-export default {
-  name: "App",
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
-</script>
-<style scoped>
-.title {
-  margin-left: 6rem;
-  color: rgb(13, 13, 255);
-  font-size: 20%;
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-.item {
-  color: red;
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
