@@ -1,32 +1,80 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app color="transparent" flat dark>
+      <div class="d-flex align-center">
+        <div id="title">
+          <v-toolbar-title>
+            <b class="myTitle">Pace</b>
+          </v-toolbar-title>
+        </div>
+      </div>
+
+      <v-spacer></v-spacer>
+      <v-btn color="rgb(51,94,234)" to="/" plain class="text-decoration-none" x-large>
+        Home
+      </v-btn>
+      <v-btn
+        color="rgb(51,94,234)"
+        to="/features"
+        plain
+        class="text-decoration-none"
+        x-large
+      >
+        Features
+      </v-btn>
+
+      <v-btn
+        color="rgb(51,94,234)"
+        to="pricing"
+        plain
+        class="text-decoration-none"
+        x-large
+      >
+        Pricing
+      </v-btn>
+      <v-btn
+        color="rgb(51,94,234)"
+        to="contact"
+        plain
+        class="text-decoration-none"
+        x-large
+      >
+        Contact
+      </v-btn>
+      <v-spacer></v-spacer>
+
+      <v-btn
+        color="rgb(51,94,234)"
+        to="/login"
+        target="_blank"
+        outlined
+        plain
+        class="text-decoration-none"
+        x-large
+      >
+        <span class="mr-2">Get Started</span>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: "App",
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style>
+.myTitle {
+  color: rgb(51, 94, 234);
+  margin-left: 3rem;
+  font-size: 2.3rem;
 }
 </style>
