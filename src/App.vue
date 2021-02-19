@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="transparent" flat dark>
+    <v-app-bar app color="transparent" flat dark fixed>
       <div class="d-flex align-center">
         <div id="title">
           <v-toolbar-title>
@@ -25,7 +25,7 @@
 
       <v-btn
         color="rgb(51,94,234)"
-        to="pricing"
+        to="/pricing"
         plain
         class="text-decoration-none"
         x-large
@@ -34,7 +34,16 @@
       </v-btn>
       <v-btn
         color="rgb(51,94,234)"
-        to="contact"
+        to="/about"
+        plain
+        class="text-decoration-none"
+        x-large
+      >
+        About
+      </v-btn>
+      <v-btn
+        color="rgb(51,94,234)"
+        to="/contact"
         plain
         class="text-decoration-none"
         x-large
