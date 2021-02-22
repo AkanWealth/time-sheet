@@ -82,7 +82,7 @@ export default {
 </script>
 <style>
 .myTitle {
-  color: rgb(51, 94, 234);
+  color: #ff6584;
   margin-left: 3rem;
   font-size: 2.3rem;
 }
