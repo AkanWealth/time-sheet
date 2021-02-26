@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Features from '../views/Features'
 import Pricing from '../views/Pricing'
 import Contact from '../views/Contact.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import Todo from '../views/Todo'
 
 Vue.use(VueRouter)
 
@@ -34,6 +37,21 @@ const routes = [{
         // which is lazy-loaded when the route is visited.
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/register',
+        name: 'Register',
+        component: Register
+    },
+    {
+        path: '/todo',
+        name: 'Todo',
+        component: Todo
     }
 ]
 

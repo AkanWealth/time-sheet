@@ -54,8 +54,7 @@
 
       <v-btn
         color="rgb(51,94,234)"
-        to="/login"
-        target="_blank"
+        to="/register"
         outlined
         plain
         class="text-decoration-none"
@@ -81,6 +80,15 @@ export default {
 };
 </script>
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
 .myTitle {
   color: #ff6584;
   margin-left: 3rem;

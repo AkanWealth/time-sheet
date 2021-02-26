@@ -29,7 +29,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .landing {
   color: #ff6584;
   font-size: 2.3rem;
