@@ -60,21 +60,22 @@
       <v-container class="fill-height" fluid>
         <v-row style="margin-top: 3rem">
           <v-col cols="6">
-            <div id="dashboard">Admin Dashboard</div>
-            <p style="color: #7171e0">
-              Dashboard with bar-chart showing the most active employee and report of
-              daily activity
-            </p>
-            <ul>
-              <li>Bar-chart</li>
-              <li>Dashboard Timer & Name of employee</li>
-              <li>View Active employee</li>
-            </ul>
+            <v-layout justify-center>
+              <v-flex>
+                <div id="dashboard">Admin Dashboard</div>
+                <p style="color: #7171e0">
+                  Dashboard with bar-chart showing the most active employee and report of
+                  daily activity
+                </p>
+                <ul>
+                  <li>Bar-chart</li>
+                  <li>Dashboard Timer & Name of employee</li>
+                  <li>View Active employee</li>
+                </ul>
+              </v-flex>
+            </v-layout>
           </v-col>
-
-          <v-col cols="6">
-            <v-img alt="featureImage" class="dashboard" src="../assets/dashboard.png" />
-          </v-col>
+          <v-img alt="featureImage" class="dashboard" src="../assets/dashboard.png" />
         </v-row>
       </v-container>
     </v-container>

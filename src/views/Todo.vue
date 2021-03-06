@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <AddTodo v-on:add-todo="addTodo" />
-    <h1>Todos</h1>
+    <h1 style="color: #335eea">Todos</h1>
     <div v-bind:key="todo.id" v-for="todo in todos">
       <TodoItem v-bind:todo="todo" v-on:del-todo="deleteTodo" />
     </div>
@@ -11,6 +11,7 @@
 <script>
 import TodoItem from "./TodoItem";
 import AddTodo from "./AddTodo";
+import axios from "axios";
 export default {
   name: "Todos",
   components: {
@@ -40,10 +41,28 @@ export default {
   },
   methods: {
     deleteTodo(id) {
-      this.todos = this.todos.filter((todo) => todo.id !== id);
+      axios
+        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then(
+          (res) => ((this.todos = this.todos.filter((todo) => todo.id !== id)), res.Data)
+        )
+        .catch((err) => console.log(err));
     },
     addTodo(newTodo) {
-      this.todos = [...this.todos, newTodo];
+      const { title, completed } = newTodo;
+      axios
+        .post("https://jsonplaceholder.typicode.com/todos", {
+          title,
+          completed,
+        })
+        .then((res) => (this.todos = [...this.todos, res.Data]))
+        .catch((err) => console.log(err));
+    },
+    created() {
+      axios
+        .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+        .then((res) => (this.todos = res.data))
+        .catch((err) => console.log(err));
     },
   },
 };
