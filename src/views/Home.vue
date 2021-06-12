@@ -1,31 +1,45 @@
 <template>
-  <div class="fill-height" fluid>
+  <v-container fluid fill-height>
     <v-row>
-      <v-col cols="12">
-        <v-layout>
-          <v-flex>
-            <div class="landing">Trace your time at your own pace</div>
-            <p>Spend less time making the right and informed decisions</p>
-            <v-btn
-              color="rgb(51,94,234)
-"
-              dark
-              x-large
-              to="/login"
-              class="text-decoration-none"
-            >
-              Login
-              <i class="fas fa-angle-double-right"></i>
-            </v-btn>
-            <v-btn class="landing-btn-2" color="#FF6584" dark x-large> Learn More</v-btn>
-          </v-flex>
-          <v-flex>
-            <v-img alt="landingPage" class="landingPic" src="../assets/landingPage.svg" />
-          </v-flex>
-        </v-layout>
+      <v-col cols="12" md="4">
+        <!-- <v-layout> -->
+        <v-flex>
+          <div class="landing">Trace your time at your own pace</div>
+          <p>Spend less time making the right and informed decisions</p>
+          <v-btn
+            style="margin-left: 2rem; margin-top: 1rem"
+            color="#335eea"
+            dark
+            x-large
+            to="/login"
+            class="text-decoration-none"
+            id="loginBtn"
+          >
+            Login
+            <i class="fas fa-angle-double-right"></i>
+          </v-btn>
+          <v-btn
+            style="margin-left: 1rem; margin-top: 1rem"
+            color="#FF6584"
+            to="/register"
+            class="text-decoration-none"
+            dark
+            outlined
+            x-large
+            id="getStarted"
+          >
+            Get Started</v-btn
+          >
+        </v-flex>
+        <!-- <v-flex> -->
+      </v-col>
+      <v-col cols="6" xs12 sm8 md4 lg4>
+        <v-img alt="landingPage" id="landingPic" src="../assets/landingPage.svg" />
+        <!-- </v-flex>
+        </v-layout> -->
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -36,37 +50,18 @@ export default {};
 .landing {
   color: #ff6584;
   font-size: 2.3rem;
+  margin-top: 5rem;
 }
 p {
   color: grey;
 }
-.landing-btn-1 {
-  color: #0000ff;
+#landingPic {
+  width: 400px;
+  /* float: right; */
+  margin-top: 5rem;
+  margin-left: 8rem;
 }
-.landing-btn-2 {
-  margin-left: 1rem;
-  padding: 20rem;
-}
-.landingPic {
-  width: 450px;
-}
-@media (max-width: 425px) {
-  .fill-height {
-    max-width: 100%;
-  }
-  .landing {
-    margin-top: 15rem;
-    font-size: 1.8rem;
-  }
-  .landingPic {
-    margin-top: 2rem;
-    margin-left: -8rem;
-    margin-right: 0.1rem;
-  }
-}
-@media (max-width: 767px) {
-  .container {
-    max-width: 100%;
-  }
+#loginBtn {
+  border-bottom-color: #ff6584;
 }
 </style>

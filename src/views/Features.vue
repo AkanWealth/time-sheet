@@ -1,5 +1,6 @@
 <template>
   <div class="Features">
+    <h2 id="title" style="color: #ff6584">Features</h2>
     <v-container class="fill-height" fluid style="min-height: 434px">
       <v-fade-transition>
         <v-row>
@@ -62,7 +63,7 @@
           <v-col cols="6">
             <v-layout justify-center>
               <v-flex>
-                <div id="dashboard">Admin Dashboard</div>
+                <div id="dashboard" style="color: #ff6584">Admin Dashboard</div>
                 <p style="color: #7171e0">
                   Dashboard with bar-chart showing the most active employee and report of
                   daily activity
@@ -87,5 +88,8 @@
 }
 .dashboard {
   width: 500px;
+}
+#title {
+  text-align: center;
 }
 </style>

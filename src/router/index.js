@@ -6,7 +6,7 @@ import Pricing from '../views/Pricing'
 import Contact from '../views/Contact.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
-import Todo from '../views/Todo'
+import Todo from '../views/Todos/Todo'
 
 Vue.use(VueRouter)
 
